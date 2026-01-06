@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars Tech Salem</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">CARS TECH</div>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>CARS TECH SALEM</h1>
+        <p>Luxury Car Service & Premium Care</p>
+        <div class="hero-buttons">
+            <a href="#services" class="btn">Book Service</a>
+            <a href="#contact" class="btn outline">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <h2>Our Premium Services</h2>
+
+    <div class="service-box">
+
+        <!-- Service 1 -->
+        <div class="service-card">
+            <h3>Luxury Car Servicing</h3>
+            <p>Complete premium service for Mercedes, BMW, Audi & luxury cars.</p>
+
+            <a class="book-btn" href="book.html?service=Luxury Car Servicing">
+   Book Now
+</a>
+
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+            <h3>Engine Diagnostics</h3>
+            <p>Advanced computer diagnostics for perfect engine performance.</p>
+
+           <a class="book-btn" href="book.html?service=Luxury Car Servicing">
+   Book Now
+</a>
+
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+            <h3>Detailing & Ceramic Coating</h3>
+            <p>High-end interior & exterior detailing with ceramic protection.</p>
+
+            <a class="book-btn" href="book.html?service=Luxury Car Servicing">
+   Book Now
+</a>
+
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="brands">
+    <h2>We Service Premium Brands</h2>
+    <div class="brand-logos">
+        <img src="images/benz.png" alt="Mercedes Benz">
+        <img src="images/bmw.png" alt="BMW">
+        <img src="images/audi.png" alt="Audi">
+        <img src="images/jaguar.png" alt="Jaguar">
+    </div>
+</section>
+
+<section class="map" id="contact">
+    <h2>Visit Our Location</h2>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.0414156913284!2d78.11144694019609!3d11.691477388566264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf19777409dd5%3A0x6c8bf5672d7bf27c!2sCARS%20TECH%20SALEM!5e0!3m2!1sen!2sin!4v1767692072115!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+</section>
+
+<footer class="footer">
+    <div class="footer-box">
+        <h3>Cars Tech Salem</h3>
+        <p>Premium Luxury Car Service Center</p>
+    </div>
+
+    <div class="footer-box">
+        <h4>Contact</h4>
+        <p>📍 no.302, MGR Nager, Jagir rettipatti, Mamangam, Sooramangalam Z1
+Salem-636302, Tamil Nadu</p>
+        <p>📞 +91 9715349671</p>
+    </div>
+
+    <div class="footer-box">
+        <h4>Working Hours</h4>
+        <p>Mon – Sat: 9:00 AM – 8:00 PM</p>
+        <p>Sunday: Closed</p>
+    </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919715349671" class="whatsapp-float" target="_blank">
+    <img src="images/whatsapp.png" alt="WhatsApp">
+</a>
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const service = params.get("service");
+
+    if (service) {
+        const waLink = document.querySelector(".book-btn");
+        waLink.href =
+            "https://wa.me/919715349671?text=" +
+            encodeURIComponent(
+                "Hi, I want to book " + service + " at Cars Tech Salem"
+            );
+    }
+</script>
+
+</body>
+</html>
+
